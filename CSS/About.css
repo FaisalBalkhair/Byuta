@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00625e;
+    padding: 15px 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 5px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    margin: 0 10px;
+    list-style-type: none;
+}
+
+nav ul li a:hover {
+    background-color: #30b7ae92;
+    border-radius: 15px;
+
+
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    color: white;
+    /* Initially hidden on larger screens */
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        /* Show the menu icon on mobile */
+    }
+
+    #nav-links {
+        display: none;
+        /* Hide the menu by default on mobile */
+        flex-direction: column;
+        /* Stack items vertically */
+        width: 100%;
+        /* Full width on mobile */
+        text-align: center;
+        /* Center text in menu */
+        position: absolute;
+        /* Position the menu below the nav */
+        top: 60px;
+        /* Adjust based on nav height */
+        left: 0;
+        /* Align to the left */
+        background-color: #00625e;
+        /* Background color of the dropdown */
+        z-index: 1;
+        /* Ensure it appears above other elements */
+    }
+
+    #nav-links.show {
+        display: flex;
+        /* Show the menu when toggled */
+    }
+
+    #nav-links li {
+        margin: 10px 0;
+        /* Space between items in the mobile view */
+    }
+}
+
+/* Logo Styles */
+#Logo {
+    width: 150px;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+section p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Section Styling */
+.section {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#company-overview,
+#mission,
+#vision {
+    background-image: url(../Images/logo\ byuta-022.png);
+    background-size: 50%;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #00625e;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
